@@ -1,26 +1,71 @@
-//Set the 30 second timer at top right of page
+onclick="container.style.display = 'none'"
+
+
+//5 multiple choice questions
+var questions = [
+    {
+        title: "Which of these is NOT a JavaScript data type?",
+        choices: ["String", "Boolean", "Number", "Method"],
+        answer: "Method",
+    },
+    { 
+        title: "Which company first developed JavaScript?",
+        choices: ["Macintosh", "Netscape", "Microsoft", "IBM"],
+        answer: "Netscape",
+    },
+    { 
+        title: "How long did it take Brendan Eich to create JavaScript?",
+        choices: ["2 weeks", "3 days", "10 hours", "5 months"],
+        answer: "10 hours",
+    },
+    { 
+        title: "document.getElementById() is an example of what?",
+        choices: ["For loops", "While loops", "DOM manipulation", "pseudocode"],
+        answer: "DOM manipulation",
+    },
+    { 
+        title: "Which symbol links ID's from HTML to CSS?",
+        choices: ["@", "#", ".", "{}"],
+        answer: "#",
+    }
+];
+
+let currentQuestion = 0;
+let currentChoices = 0;
+let startButton = document.getElementById("start-button");
+
+//eventListener for starting game
+var timer = 30000;
+startGame();
+
 document.getElementById("timer")
 var timer = setInterval(function() {
 })
 
-//Confirm for user to begin quiz
+timerId = setInterval(clockTick, 30000);
+timerEl.textContent = time;
 
 
-//5 multiple choice questions
-var question1 = ("Which of these is NOT a JavaScript data type?");
-var answer1Choices = ["String", "Boolean", "Number", "Method"];
-var answer1 = ("Method");
-var question2 = ("Which company first developed JavaScript?");
-var answer2Choices = ["Macintosh", "Netscape", "Microsoft", "IBM"];
-var answer2 = ("Netscape");
-var question3 = ("How long did it take Brendan Eich to create JavaScript?");
-var answer3Choices = ["2 weeks", "3 days", "10 hours", "5 months"];
-var answer3 = ("10 hours");
-var question4 = ("document.getElementById() is an example of what?");
-var answer4Choices = ["For loops", "While loops", "DOM manipulation", "pseudocode"];
-var answer4 = ("DOM manipulation");
-var question5 = ("Which symbol links ID's from HTML to CSS?");
-var question5Choices = ["@", "#", "." "{ }"];
+function startGame (){
+//hide start selection
+    var startScreen = document.getElementById("start-screen");
+    startScreenEl.setAttribute("class", "hide");
+
+//unhide questions
+questionsEl.removeAttribute("class");
 
 
-//eventListener for completion of question 5 or 30 seconds.
+getQuestion1();
+
+}
+
+//get current question from Questions array
+function getQuestions(){
+    var currentQuestion = questions(currentQuestionIndex);
+
+
+}
+
+function startTimer() {
+    timer -- 
+}

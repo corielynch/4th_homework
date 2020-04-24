@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>JavaScript Quiz</title>
 </head>
+
+<!-- Start Page -->
 <body>
-    <div class= high_scores>
-        View High Scores
+    <section class="start-page">
+        <div id="Start-button">
+            <button type="button" class="btn btn-outline-danger" onclick="style.display = 'none'">Click this button if you're ready for the TIMED JavaScript quiz!</button>
+        </div>
+    </section>
+
+<div class= "timer">
+
+</div>
+
+<section class="quiz">
+    
+</section>
+
+<div class="container">
+  <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4">
+    <div class="col">View High Scores</div>
+    <div class =form>
+        <p>You did great! Thanks for playing!</p>
+        <input class="form-control form-control-lg" type="text" placeholder="Enter initials">
     </div>
-    <div class= timer>
-        Timer:
-    </div>
+    <div class="timer">Timer: </div>
+  </div>
+</div>
+
+
+
+<!-- Finish Page -->
     
 
+<!-- JavaScript link -->
     <script src="./app.js"></script>
 </body>
 </html>
