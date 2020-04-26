@@ -30,42 +30,50 @@ var questions = [
     }
 ];
 
-let currentQuestion = 0;
-let currentChoices = 0;
-let startButton = document.getElementById("start-button");
+//Event listener to start timer AND display 1st question on click button
+$("button").click(function(){
+    startGame();
+  });
+let questionsEl = document.getElementById("quiz");
 
-//eventListener for starting game
+
+function startGame (){
+    getQuestions();
+}
+
+    //Start timer
 var timer = 30000;
-startGame();
 
 document.getElementById("timer")
 var timer = setInterval(function() {
 })
 
-timerId = setInterval(clockTick, 30000);
+timerId = setInterval(time, 30000);
 timerEl.textContent = time;
 
 
-function startGame (){
-//hide start selection
-    var startScreen = document.getElementById("start-screen");
-    startScreenEl.setAttribute("class", "hide");
-
-//unhide questions
-questionsEl.removeAttribute("class");
-
-
-getQuestion1();
-
-}
-
 //get current question from Questions array
 function getQuestions(){
-    var currentQuestion = questions(currentQuestionIndex);
-
-
+    var questionsDiv = document.getElementById("quiz");
+    questionsDiv.textContent = questions[0].title 
 }
+    for (var i = 0; i < questions.length; i++) {
+      var newQuestions = document.createElement("p");
+      newQuestions.textContent = questions[i];
+      questionsDiv.appendChild(newQuestions);
+    }
+    
+
+
+
 
 function startTimer() {
     timer -- 
 }
+
+//Need ability to save user's choices for high score.
+
+//Hides Finish Page until final click
+document.getElementsByClassName("container2").addEventListener("click", display);
+
+//Create form for initials to link to high scores

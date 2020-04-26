@@ -22,3 +22,8 @@ body {
     display: flex;
     justify-content: center;
 }
+
+#button-two {
+    display: flex;
+    justify-content: center;
+}
